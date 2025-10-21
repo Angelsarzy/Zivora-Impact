@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Designs Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .design-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .design-card:hover {
+            transform: scale(1.05);
+        }
+        .design-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .design-card h3 {
+            margin: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .design-card p {
+            margin: 0 10px 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canva Designs Gallery</h1>
+    <div class="grid-container">
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+1" alt="Design 1">
+            <h3>Poster Design</h3>
+            <p>Modern poster for events</p>
+        </div>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+2" alt="Design 2">
+            <h3>Social Media Graphic</h3>
+            <p>Engaging Instagram post</p>
+        </div>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+3" alt="Design 3">
+            <h3>Business Card</h3>
+            <p>Professional business card</p>
+        </div>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+4" alt="Design 4">
+            <h3>Flyer Design</h3>
+            <p>Promotional event flyer</p>
+        </div>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+5" alt="Design 5">
+            <h3>Presentation Slide</h3>
+            <p>Corporate slide deck</p>
+        </div>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/300x200?text=Design+6" alt="Design 6">
+            <h3>Logo Design</h3>
+            <p>Minimalist brand logo</p>
+        </div>
+    </div>
+</body>
+</html>

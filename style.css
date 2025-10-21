@@ -1,0 +1,57 @@
+/* Custom styles to complement Tailwind */
+nav a {
+    transition: color 0.3s ease;
+}
+
+.project {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+button, a[href*="example.com"] {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    transition: ring 0.3s ease;
+}
+
+/* About section styles */
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+#about ul li {
+    transition: color 0.3s ease;
+}
+
+#about ul li:hover {
+    color: #4f46e5; /* indigo-600 */
+}
+
+/* Portfolio project cards */
+.portfolio-card {
+    transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Contact form enhancements */
+form input, form textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}

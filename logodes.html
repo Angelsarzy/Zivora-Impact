@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Logo Designs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white py-6">
+        <h1 class="text-3xl font-bold text-center">Canva Logo Designs Showcase</h1>
+        <p class="text-center mt-2">Explore a variety of logo styles created with Canva</p>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div id="logo-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Logo cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 Canva Logo Showcase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data for logo designs
+        const logos = [
+            {
+                title: "Minimalist Logo",
+                description: "A clean and simple logo with modern typography.",
+                image: "https://via.placeholder.com/300x200?text=Minimalist+Logo",
+                category: "Minimalist"
+            },
+            {
+                title: "Vintage Badge",
+                description: "A retro-style badge logo with bold colors.",
+                image: "https://via.placeholder.com/300x200?text=Vintage+Badge",
+                category: "Vintage"
+            },
+            {
+                title: "Abstract Mark",
+                description: "An abstract logo with geometric shapes.",
+                image: "https://via.placeholder.com/300x200?text=Abstract+Mark",
+                category: "Abstract"
+            },
+            {
+                title: "Monogram Logo",
+                description: "A sophisticated monogram with elegant fonts.",
+                image: "https://via.placeholder.com/300x200?text=Monogram+Logo",
+                category: "Monogram"
+            },
+            {
+                title: "Illustrative Logo",
+                description: "A detailed illustrative logo with vibrant colors.",
+                image: "https://via.placeholder.com/300x200?text=Illustrative+Logo",
+                category: "Illustrative"
+            },
+            {
+                title: "Tech Startup Logo",
+                description: "A sleek logo for tech startups with a futuristic vibe.",
+                image: "https://via.placeholder.com/300x200?text=Tech+Startup+Logo",
+                category: "Tech"
+            },
+            {
+                title: "Hand-Drawn Logo",
+                description: "A playful hand-drawn logo with organic shapes.",
+                image: "https://via.placeholder.com/300x200?text=Hand-Drawn+Logo",
+                category: "Hand-Drawn"
+            },
+            {
+                title: "Bold Typography Logo",
+                description: "A logo focusing on strong, bold typography.",
+                image: "https://via.placeholder.com/300x200?text=Bold+Typography+Logo",
+                category: "Typography"
+            }
+        ];
+
+        // Function to render logo cards
+        function renderLogos() {
+            const logoGrid = document.getElementById('logo-grid');
+            logoGrid.innerHTML = '';
+
+            logos.forEach(logo => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300';
+                card.innerHTML = `
+                    <img src="${logo.image}" alt="${logo.title}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">${logo.title}</h2>
+                        <p class="text-gray-600 mt-2">${logo.description}</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium mt-3 px-3 py-1 rounded-full">${logo.category}</span>
+                    </div>
+                `;
+                logoGrid.appendChild(card);
+            });
+        }
+
+        // Initialize the logo grid
+        document.addEventListener('DOMContentLoaded', renderLogos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogoWear Boutique</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <style>
+    .product-card {
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-indigo-400">LogoWear Boutique</a>
+      <div class="space-x-4">
+        <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+        <a href="#shop" class="hover:text-indigo-400 transition">Shop</a>
+        <a href="#cart" class="hover:text-indigo-400 transition">Cart (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero py-24 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-extrabold mb-4">Bold Designs, Unique Style</h1>
+      <p class="text-xl mb-6">Explore our exclusive clothing with iconic logos</p>
+      <a href="#shop" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">Shop Collection</a>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="container mx-auto py-12">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Sidebar for Filters -->
+      <aside class="w-full md:w-1/4 bg-gray-800 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4">Filter by Category</h3>
+        <ul class="space-y-2">
+          <li><button class="filter-btn w-full text-left py-2 px-4 hover:bg-indigo-600 rounded" data-category="all">All</button></li>
+          <li><button class="filter-btn w-full text-left py-2 px-4 hover:bg-indigo-600 rounded" data-category="tshirt">T-Shirts</button></li>
+          <li><button class="filter-btn w-full text-left py-2 px-4 hover:bg-indigo-600 rounded" data-category="hoodie">Hoodies</button></li>
+          <li><button class="filter-btn w-full text-left py-2 px-4 hover:bg-indigo-600 rounded" data-category="cap">Caps</button></li>
+        </ul>
+      </aside>
+
+      <!-- Product Grid -->
+      <div class="w-full md:w-3/4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="tshirt">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" class="w-full h-64 object-cover" alt="Vintage Logo Tee">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Vintage Logo Tee</h3>
+              <p class="text-indigo-400">$24.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Vintage Logo Tee" data-price="24.99">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="hoodie">
+            <img src="https://images.unsplash.com/photo-1571945153237-3b8d3a0e31b3" class="w-full h-64 object-cover" alt="Bold Hoodie">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Bold Hoodie</h3>
+              <p class="text-indigo-400">$54.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Bold Hoodie" data-price="54.99">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="cap">
+            <img src="https://images.unsplash.com/photo-1576872381124-0e030a53e9f3" class="w-full h-64 object-cover" alt="Snapback Cap">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Snapback Cap</h3>
+              <p class="text-indigo-400">$22.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Snapback Cap" data-price="22.99">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="tshirt">
+            <img src="https://images.unsplash.com/photo-1521577352947-9bb5876b8e9a" class="w-full h-64 object-cover" alt="Minimalist Tee">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Minimalist Tee</h3>
+              <p class="text-indigo-400">$27.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Minimalist Tee" data-price="27.99">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="hoodie">
+            <img src="https://images.unsplash.com/photo-1598528738019-57fd32ad9f41" class="w-full h-64 object-cover" alt="Graphic Hoodie">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Graphic Hoodie</h3>
+              <p class="text-indigo-400">$59.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Graphic Hoodie" data-price="59.99">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="product-card bg-gray-800 rounded-lg overflow-hidden" data-category="cap">
+            <img src="https://images.unsplash.com/photo-1596456171640-6f9e7809df35" class="w-full h-64 object-cover" alt="Designer Cap">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Designer Cap</h3>
+              <p class="text-indigo-400">$19.99</p>
+              <button class="add-to-cart mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700" data-name="Designer Cap" data-price="19.99">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p>&copy; 2025 LogoWear Boutique. All rights reserved.</p>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.getElementById('cart-count');
+    const productGrid = document.getElementById('product-grid');
+    const products = Array.from(productGrid.children);
+
+    // Add to Cart Functionality
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+        const productName = button.getAttribute('data-name');
+        const productPrice = button.getAttribute('data-price');
+        alert(`Added ${productName} ($${productPrice}) to cart!`);
+      });
+    });
+
+    // Filter Functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        products.forEach(product => {
+          if (category === 'all' || product.getAttribute('data-category') === category) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
